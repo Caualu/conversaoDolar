@@ -17,6 +17,9 @@ def Conversao():
     elif opcao == 2:
       resultado = 5.17 * moeda
       dpg.set_value("resultado", f" Conversao final:${resultado:,.2f}")
+    elif opcao == 3:
+      resultado = 5.62 * moeda
+      dpg.set_value("resultado", f" Conversao final:${resultado:,.2f}")
     else:
       dpg.set_value("resultado", "por favor, insira valores numerico validos")         
         
@@ -26,7 +29,7 @@ def Conversao():
 dpg.create_viewport(title='Calculadora de Conversao', width=700, height=300)
 with dpg.window(label="Calculadora Conversão", width=600, height=300):
   
-  dpg.add_text("qual opcao voce quer \nReal/Dolar Digite - 1 \nDolar/Dolar digite - 2:")
+  dpg.add_text("qual opcao voce quer \nReal/Dolar Digite - 1 \nDolar/Dolar digite - 2\nEuro digite - 3:")
     
   dpg.add_input_text(label="opcao:", tag="opcao")
     
